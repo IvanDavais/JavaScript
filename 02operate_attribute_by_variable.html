@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script type="text/javascript">
+    window.onload = function(){
+
+      var oDiv = document.getElementById('div1');
+
+      var sMystyle = 'fontSize';
+      var sValue = '20px';
+
+      // oDiv.style.sMystyle = sValue; --->invalid
+
+      // When you operate attributes of an element by using a variable, you need to use bracket.
+      oDiv.style[sMystyle] = sValue;
+      // oDiv.style.font-size = 53px;
+    }
+  </script>
+</head>
+<body>
+
+  <div id="div1">This is a div. In this webpage, we want to manipulate attributes by variable.</div>
+</body>
+</html>
