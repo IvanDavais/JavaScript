@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script type="text/javascript">
+
+    //The variable iNum will be pre-parsing in advance. 
+    //It means iNum will be declared but didn't be assigned.
+    //So when you alert iNum, it will display undefined instead of 12.
+    alert(iNum);
+
+    //There will display a mistake: iNUm02 is not defined
+    // alert(iNUm02);
+
+    //Pre-parsing will make the declaration and definition of the function ahead of time.
+    //So the following will display 'hello world!'
+    myalert();
+
+    var iNum = 12;
+
+    function myalert(){
+      alert('hello world!');
+    }
+
+    // myalert(); this statement will display 'hello world!'
+  </script>
+</head>
+<body>
+
+</body>
+</html>
