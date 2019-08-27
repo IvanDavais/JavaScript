@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script type="text/javascript">
+    window.onload = function(){
+      function fnChangeStyle(mystyle,val){
+        var oDiv = document.getElementById('div1');
+        oDiv.style[mystyle] = val;
+      }
+
+      fnChangeStyle('fontSize','30px');
+      fnChangeStyle('color','red');
+      fnChangeStyle('backgroundColor','#ddd');
+    }
+  </script>
+</head>
+<body>
+  <div id="div1">This is a div element</div>
+</body>
+</html>
