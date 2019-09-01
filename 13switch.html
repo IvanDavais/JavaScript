@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script type="text/javascript">
+    window.onload = function(){
+      var iWeek = 2;
+      var oBody = document.getElementById('body01');
+
+      // if(iWeek==1)
+      // {
+      //   oBody.style.backgroundColor = 'gold';
+      // }else if (iWeek==2)
+      // {
+      //   oBody.style.backgroundColor = 'pink';
+      // }else if(iWeek==3)
+      // {
+      //   oBody.style.backgroundColor = 'yellowgreen';
+      // }
+
+      switch(iWeek){
+        case 1:
+          oBody.style.backgroundColor = 'gold';
+          // The break statement terminates the current loop.
+          break;
+        case 2:
+          oBody.style.backgroundColor = 'green';
+          break;
+        case 3:
+          oBody.style.backgroundColor = 'pink';
+          break;
+
+        default:
+          oBody.style.backgroundColor = 'lightgreen';
+      }
+    }
+  </script>
+
+  <style type="text/css">
+    #body01{
+      width: 100px;
+      height: 100px;
+      border: 2px solid #000;
+    }
+  </style>
+</head>
+<body>
+  <div id="body01"></div>
+</body>
+</html>
