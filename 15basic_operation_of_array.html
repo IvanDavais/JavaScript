@@ -16,8 +16,28 @@
     alert(" Join Example: " + aList.join('^'));
 
     aList.push('b');
-    alert("after push 'b' item, the array now is " + aList)
+    alert("after push 'b' item, the array now is " + aList);
 
+    //The pop() method removes the last element from an array and returns that element. This method changes the length of the array.
+    aList.pop();
+    alert("The pop method remove the last element from an array, so now the array is " + aList);
+
+    aList.reverse();
+    alert("after using reverse, the array now is " + aList);
+
+    aList.shift();
+    alert("after using shift, the array became " + aList);
+
+    //The unshift() method adds one or more elements to the beginning of an array and returns the new length of the array.
+    aList.unshift('unshift');
+    alert("add unshift to the beginning of an array, now the array is: " + aList);
+
+    var aList01 = ['a', 'b', 'c', 'a', 'd', 'b', 'c'];
+    alert('the first indext of b appear at '+aList01.indexOf('b'));
+
+    //The splice() method changes the contents of an array by removing or replacing existing elements and/or adding new elements in place.
+    aList01.splice(2,3,'f','u','c','k');
+    alert('delete 2 item after the first b than add fuck to this array. Now this array is '+ aList01);
   </script>
 </head>
 <body>
