@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>put data to the webpage using for statement</title>
+  <script type="text/javascript">
+    window.onload = function (){
+      var oUl = document.getElementById('film');
+      var aList = ['Mermaid','Game of throne','Card House','Spartacus'];
+      var listLen = aList.length;
+      var str = '';
+
+      for (var i = 0; i <listLen; i++) {
+        str += '<li>'+aList[i]+'</li>';
+      }
+
+      oUl.innerHTML = str;
+    }
+  </script>
+
+  <style type="text/css">
+    #film{
+      width: 300px;
+      height:305px ;
+      padding: 0;
+      margin: 50px auto;
+      list-style: none;
+    }
+
+    #film li{
+      height: 60px;
+      border-bottom: 1px dotted #000;
+      line-height: 60px;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+  <ul id="film">
+  </ul>
+</body>
+</html>
