@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Get Element By Id</title>
+  <script type="text/javascript">
+    window.onload = function(){
+      var oUl1 = document.getElementsByTagName('li');
+
+      alert(oUl1.length);
+      // Cannot set background color for a collection of elements
+      //oUl1.style.backgroundColor = 'gold';
+
+      // correct version:
+      // oUl1[1].style.backgroundColor = 'red';
+
+      // for(var i = 0; i <oUl1.length;i++){
+      //   oUl1[i].style.backgroundColor = 'pink';
+      // }
+
+      var oUl2 = document.getElementById('ul2');
+      var oLi = oUl2.getElementsByTagName('li');
+      alert(oLi.length);
+
+      oLi[0].style.backgroundColor = 'yellow';
+
+    }
+  </script>
+</head>
+<body>
+  <ul id="ul1">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+    <li>6</li>
+    <li>7</li>
+    <li>8</li>
+  </ul>
+
+  <ul id="ul2">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+  </ul>
+</body>
+</html>
