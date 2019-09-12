@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script type="text/javascript">
+    //String splicing
+    var s01 = 'abc';
+    var s02 = 'def';
+    var s03 = s01 + s02;
+    //alert(s03);  //'abcdef'
+
+    //parseInt &parseFloat
+    var sTr01 = 12.12;
+    // alert(parseInt(sTr01));  //12
+    // alert(parseFloat(sTr01));  //12.12
+
+    // split
+    var sTr02 = '2019-09-12';
+    var aRr = sTr02.split('-');
+    // alert(aRr);  //'2019,09,12'
+
+    var aRr2 =sTr02.split("");
+    //alert(aRr2);  //'2,0,1,9,-,0,9,,-,1,2,'
+
+    //The indexOf() method returns the first index at which a given element can be found in the array, 
+    //or -1 if it is not present
+    var sTr03 = 'abcdef microsoft asljfkljjas';
+    var iNum03 = sTr03.indexOf('microsoft');
+    var iNum04 = sTr03.indexOf('yahei');
+    //alert(iNum03);  //7
+    //alert(iNum04);  //-1
+
+    //substring
+    var sTr04 = 'abcdef123456higklmn';
+    var sTr05 = '#div';
+    var sTr06 = sTr04.substring(6,12);  //123456
+    var sTr07 = sTr05.substring(1);  //div
+
+    alert(sTr06);
+    alert(sTr07);
+
+    // toUpperCase  toLowerCase
+    var sTr08 = 'abcdef';
+    var sTr09 = 'HIGKLMN';
+    var sTr10 = sTr08.toUpperCase();
+    var sTr11 = sTr09.toLowerCase();
+    alert(sTr10);
+    alert(sTr11);
+
+    //Reverse of string elements
+    var sTr12 = '1234j3123lsdfjklgar';
+    var sTr13 = sTr12.split('').reverse().join('');
+    alert(sTr13);
+  </script>
+</head>
+<body>
+  
+</body>
+</html>
