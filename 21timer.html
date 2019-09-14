@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>timer</title>
+</head>
+<body>
+  <script type="text/javascript">
+    function myalert(){
+      alert('hello world!');
+    }
+
+    // setTimeout() sets a timer which executes a function or specified piece of code once the timer expires.
+    // var timer01 = setTimeout(myalert,2000);
+
+    // clearTimeout method cancels a timeout previously established by calling setTimeout().
+    // clearTimeout(timer01);
+
+    // setInterval method repeatedly calls a function or executes a code snippet, with a fixed time delay between each call.
+    var timer02 = setInterval(myalert,3000);
+
+    //anonymous function
+    /*var timer02 = setInterval(function(){
+       alert('hello world!');
+    },3000)*/
+    clearInterval(timer02) ;
+  </script>
+</body>
+</html>
