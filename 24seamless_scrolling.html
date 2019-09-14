@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style type="text/css">
+      *{
+        margin: 0;
+        padding: 0;
+      }
+
+      .btns_con{
+        position: absolute;
+        width: 100%;
+        left: 50px;
+        top: 100px;
+        z-index: 10px;
+      }
+      .left{
+        position: absolute;
+        left: 70px;
+        border-radius: 30px;
+        background-color: gold;
+        cursor: pointer;
+      }
+      .left:hover{
+        background-color: pink;
+      }
+      .right{
+        position: absolute;
+        right:170px;
+        border-radius: 30px;
+        background-color: gold;
+        cursor: pointer;
+      }
+      .right:hover{
+        background-color: pink;
+      }
+      .list_con{
+        width: 1000px;
+        height: 200px;
+        border: 1px solid #000;
+        margin: 10px auto 0;
+        background-color: #f0f0f0;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .list_con ul{
+        list-style: none;
+        width: 2000px;
+        height: 200px;
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
+
+      .list_con li{
+        width: 180px;
+        height: 180px;
+        float: left;
+        margin: 10px;
+      }
+
+
+    </style>
+
+    <script type="text/javascript">
+      window.onload = function()
+      {
+        var oDiv = document.getElementById('slide');
+        var oUl = oDiv.getElementsByTagName('ul')[0];
+        var oBtn01 = document.getElementById('btn01');
+        var oBtn02 = document.getElementById('btn02');
+
+        oUl.innerHTML = oUl.innerHTML + oUl.innerHTML;
+        var iLeft = 0;
+        var iSpeed = -3;
+        var iNowSpeed = 0;
+
+        function run(){
+          iLeft += iSpeed;
+          // The total width of one li is the width of li plus a double margin.
+          // When the UL scrolls to the left to the 5th li, the entire ul is pulled back to the starting position in an instant.
+          if(iLeft < -1000)
+          {
+            iLeft = 0;
+          }
+
+          //When the UL scrolls to the right at the starting position, the entire UL is pulled back to the position in the fifth left.
+          if(iLeft > 0)
+          {
+            iLeft = -1000;
+          }
+          oUl.style.left = iLeft + 'px';
+        }
+
+        var timer = setInterval(run,20);
+
+        oBtn01.onclick = function(){
+          iSpeed = -3;
+        }
+        oBtn02.onclick = function(){
+          iSpeed = 3;
+        }
+
+        oDiv.onmouseover = function(){
+          iNowSpeed = iSpeed;
+          iSpeed = 0;
+        }
+
+        oDiv.onmouseout = function(){
+          iSpeed = iNowSpeed;
+        }
+      }
+
+      
+    </script>
+</head>
+<body>
+  <div class="btns_con">
+    <div id="btn01" class="left">&lt;</div>
+    <div id="btn02" class="right">&gt;</div>
+  </div>
+
+  <div id="slide" class="list_con">
+    <ul>
+      <li><a href=""><img src="images/goods001.jpg" alt="good picture"></a></li>
+      <li><a href=""><img src="images/goods002.jpg" alt="good picture"></a></li>
+      <li><a href=""><img src="images/goods003.jpg" alt="good picture"></a></li>
+      <li><a href=""><img src="images/goods004.jpg" alt="good picture"></a></li>
+      <li><a href=""><img src="images/goods005.jpg" alt="good picture"></a></li>
+    </ul>
+  </div>
+</body>
+</html>
