@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>clock</title>
+  <script type="text/javascript">
+    window.onload = function(){
+      var oDiv = document.getElementById('div1');
+
+      function  fnGetRealTime()
+      {
+        var sNow = new Date();
+        var iYear = sNow.getFullYear();
+        // Note: month start at 0, so the actual month need plus 1.
+        var iMonth = sNow.getMonth()+1;
+        var iDate = sNow.getDate();
+        //The initial index starts at 0 represents Sunday.
+        var iWeek = sNow.getDay();
+        var iHour = sNow.getHours();
+        var iMinute = sNow.getMinutes();
+        var iSecond = sNow.getSeconds();
+        var sTr = 'Now time: '+iYear +'-'+iMonth+'-'+iDate+'  '+fnWeek(iWeek)+' '+fnAdjustFormat(iHour)+':'+fnAdjustFormat(iMinute)+':'+fnAdjustFormat(iSecond);
+        oDiv.innerHTML = sTr;
+
+        function fnWeek(i)
+        {
+          switch(i)
+          {
+            case '1':
+              return 'Monday';
+              break;
+            case '2':
+              return 'Tuesday';
+              break;
+            case '3':
+              return 'Wednesday';
+              break;
+            case '4':
+              return 'Thursday';
+              break;
+            case '5':
+              return 'Friday';
+              break;
+            case '6':
+              return 'Saturday';
+              break;
+            default:
+              return 'Sunday';
+          }
+        }
+      }
+
+      function fnAdjustFormat(n)
+      {
+        if(n<10)
+        {
+          return '0'+n;
+        }
+        else
+        {
+          return n;
+        }
+      }
+    //The following statement can solve that there exist 1-second delay in display the clock.
+    fnGetRealTime();
+    setInterval(fnGetRealTime,1000);
+    }
+  </script>
+
+  <style type="text/css">
+    #div1
+    {
+      text-align: center;
+      font-size: 30px;
+      color: pink;
+      margin-top: 50px;
+    }
+  </style>
+</head>
+<body>
+  <div id="div1"></div>
+</body>
+</html>
