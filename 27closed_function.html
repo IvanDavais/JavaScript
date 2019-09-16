@@ -1,0 +1,47 @@
+<!-- why use the closed function?
+     Because the closed function can create an independent space, the variable, and function which defined in a closed function
+     will not influence other external function with the same name. This approach effectively avoids naming conflicts.
+     Besides, when importing multiple js files, using this method is more secure than other methods.
+
+
+     1.These statement codes demonstrate that the execution of closed function will be not constrained by normal function.
+     2.There are three ways to write a closed method.
+     No.1----》(function(){})();
+     N0.2----》!function(){}();
+     No.3----》~function(){}();
+     3.Some external js file will add ';' symbol to block off other above code. For instance:
+     ;(function(){....})();
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>closed function</title>
+  <script type="text/javascript">
+    var iNum01 = 12;
+
+    function myalert()
+    {
+      alert('normal function!');
+    }
+
+    (function()
+    {
+      iNum01 = 24;
+      function myalert()
+      {
+        alert('closed function!');
+      }
+      alert(iNum01);
+      myalert();
+    })();
+
+    alert(iNum01);
+    myalert();
+
+  </script>
+</head>
+<body>
+
+</body>
+</html>
