@@ -1,0 +1,29 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>window location attribute</title>
+  <script type="text/javascript">
+    window.onload = function(){
+      //store the previous page
+      var sUrl = document.referrer;
+
+      var oBtn = document.getElementById('btn01');
+
+      oBtn.onclick = function(){
+        window.location.href = 'http://www.baidu.com';
+        /*
+        Because achieving this feature needs service environment,
+        so those statements can not complete the function of jumping to the previous page.
+        */
+
+        //window.location.href = sUrl;
+      }
+    }
+  </script>
+</head>
+<body>
+  <input type="button" name="" value="Previous Page" id='btn01'>
+</body>
+</html>
