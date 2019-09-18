@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>countdown</title>
+  <script type="text/javascript">
+    window.onload = function(){
+      var oDiv = document.getElementById('div1');
+      function timeleft(){
+        var now = new Date();
+        var future = new Date(2019,8,21,24,0,0);
+        var lefts = parseInt((future-now)/1000);
+        var day = parseInt(lefts/86400);
+        var hour = parseInt(lefts%86400/3600);
+        var min = parseInt(lefts%86400%3600/60);
+        var sec = lefts%60;
+        str = 'There are '+day+ ' day '+hour+' hour '+min+' minutes '+sec+' seconds '+'to go before 24:00:00 on September 21, 2019.';
+        oDiv.innerHTML = str;
+      }
+      timeleft();
+      setInterval(timeleft,1000);
+    }
+  </script>
+</head>
+<body>
+  <div id="div1"></div>
+</body>
+</html>

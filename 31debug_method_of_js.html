@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>debug method of js</title>
+  <script type="text/javascript">
+    window.onload = function()
+    {
+      var oBody = document.getElementById('body01');
+      var iNum01 = 12;
+
+      // Alert will prevent the execution of functions.
+      // The detail situation is the website will alert 24 then 36, subsequently show gold background colour.
+      // oBody.style.backgroundColor
+      // alert(iNum01);
+
+      oBody.style.backgroundColor = 'gold';
+
+      var iNum02 = 24;
+
+      var iNum03 = 36;
+
+      // alert(iNum02);
+
+      //The console method log() outputs a message to the web concole.
+      //Note:This feature is available in Web Workers.
+      console.log(iNum02);
+
+      setInterval(function(){
+        iNum03++;
+
+        // console.log(iNum03);
+        // The document.title proprity gets or sets the current title of the document.
+        document.title = iNum03;
+      },100)
+
+
+    }
+  </script>
+</head>
+<body id = 'body01'>
+  
+</body>
+</html>

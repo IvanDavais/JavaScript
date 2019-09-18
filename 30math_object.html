@@ -22,13 +22,14 @@
     console.log(Math.ceil(5.2));
 
     //Generate an arbitrary number between 10 and 20.
-    var iN01 = 10;
+    var iN01 =  10;
     var iN02 = 20;
     var arr2 = [];
 
     for(var i=0;i<40;i++){
-      //Attention: As a subtraction of i1 and i2, you need to add one to their subtraction result.
-      //Because we use Math.floor method, this method will change 19.99 to 19, and we will never get 20.
+      //Attention: As a subtraction of i1 and i2, you need to plus 1 to their subtraction end result.
+      //Due to the fact we use Math.floor method, this method will change 19.99 to 19, and we are able to
+      //by no means get 20.
       var iNum02 = Math.floor((iN02-iN01+1)*Math.random())+iN01;
       arr2.push(iNum02);
     }
