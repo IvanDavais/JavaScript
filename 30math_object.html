@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Math Object</title>
+  <script type="text/javascript">
+    var iPi = Math.PI;
+    console.log(iPi);
+    var arr = [];
+    for(var i=0;i<20;i++)
+    {
+      // Math.random can only return a random number between 0 and 1 (excluding 1)
+      var iNum = Math.random();
+      arr.push(iNum);
+    }
+
+    console.log(arr);
+    // The Math.floor() function returns the largest integer less than or equal to a given number.
+    console.log(Math.floor(5.6));
+
+    // The Math.ceil() function always rounds a number up to the next largest whole number or integer.
+    console.log(Math.ceil(5.2));
+
+    //Generate an arbitrary number between 10 and 20.
+    var iN01 = 10;
+    var iN02 = 20;
+    var arr2 = [];
+
+    for(var i=0;i<40;i++){
+      //Attention: As a subtraction of i1 and i2, you need to add one to their subtraction result.
+      //Because we use Math.floor method, this method will change 19.99 to 19, and we will never get 20.
+      var iNum02 = Math.floor((iN02-iN01+1)*Math.random())+iN01;
+      arr2.push(iNum02);
+    }
+
+    console.log(arr2);
+  </script>
+</head>
+<body>
+
+</body>
+</html>
